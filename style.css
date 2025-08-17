@@ -1,0 +1,106 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9fb;
+    margin: 0;
+    padding: 0;
+}
+
+.calendar-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #4a90e2;
+    color: white;
+}
+
+header button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    justify-content: center;
+}
+
+.calendar div {
+    padding: 15px;
+    border: 1px solid #eee;
+    height: 74px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .calendar div {
+        height: 88px;
+    }
+}
+
+.calendar .day-header {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+.calendar .meeting {
+    background-color: #d1e7dd;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    width: 300px;
+}
+
+.popup-content label {
+    display: block;
+    margin-top: 10px;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.popup-buttons button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
